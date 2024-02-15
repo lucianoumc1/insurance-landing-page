@@ -1,7 +1,18 @@
 ---
-const {text} = Astro.props
+const { text, hoverfill } = Astro.props;
 ---
 
-<button class = "bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 border-solid border-2 border-sky-500" type = "button">{text}
+<button
+  class:list={[
+    "px-8 py-2 border-solid border-2 bg-[#fff0]",
+    {
+      "text-primary-Dark-Violet border-neutral-Very-Dark-Violet hover:text-neutral-Very-Light-Gray hover:bg-neutral-Very-Dark-Violet":
+        hoverfill,
+      "text-neutral-Very-Light-Gray border-neutral-Very-Light-Gray hover:text-neutral-Very-Dark-Violet hover:bg-neutral-Very-Light-Gray":
+        !hoverfill,
+    },
+  ]}
+  type="button"
+  >{text}
+</button>
 
-</button> 
