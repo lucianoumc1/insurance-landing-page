@@ -1,10 +1,13 @@
 ---
 import Navmenu from "../components/Navmenu.astro";
+import Footer from "../components/Footer.astro"
+
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -30,7 +33,7 @@ const { title } = Astro.props;
   <body>
     <Navmenu />
     <slot />
-    <slot name="footer" />
+    <Footer/>
   </body>
 </html>
 <style is:global>

@@ -1,7 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Cover from "../components/Cover.astro";
+import AreDiff from "../components/AreDiff.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main></main>
+  <main>
+    <Cover />
+    <AreDiff />
+    <section class="p-24">
+      <div
+        class="bg-primary-Dark-Violet flex min-h-44 items-center p-12 relative my-0 mx-auto"
+      >
+        <img
+          src="../../public/bg-pattern-how-we-work-desktop.svg"
+          alt=""
+          class="absolute h-full right-0"
+        />
+        <div class="flex-1">
+          <h2
+            class="text-neutral-Very-Light-Gray font-headings text-4xl text-balance"
+          >
+            Find out more about how we work
+          </h2>
+        </div>
+        <div class="flex-1">
+          <button>how we work</button>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
